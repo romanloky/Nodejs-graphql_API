@@ -40,7 +40,7 @@ mongoose
     
   )
   .then(() => {
-    app.listen(8000);
+    app.listen(process.env.Port || 8000);
   })
   .catch(err => {
     console.log(err);
