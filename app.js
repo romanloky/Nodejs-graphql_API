@@ -34,7 +34,7 @@ app.use(
 
 mongoose
   .connect(
-    `mongodb+srv://roman:oi6antRvyHGposRp}@cluster0-gcwru.mongodb.net/events-react-dev?retryWrites=true`
+    `mongodb+srv://roman:oi6antRvyHGposRp@cluster0-gcwru.mongodb.net/events-react-dev?retryWrites=true`
     
   )
   .then(() => {
