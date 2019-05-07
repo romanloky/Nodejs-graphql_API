@@ -38,7 +38,11 @@ mongoose
     
   )
   .then(() => {
-    app.listen(process.env.Port || 8000);
+      var server = app.listen(process.env.Port || 4000,function(){
+      var port = server.address().port;
+      console.log("express working");
+    }
+      );
   })
   .catch(err => {
     console.log(err);
