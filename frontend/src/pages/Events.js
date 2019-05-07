@@ -75,7 +75,7 @@ class EventsPage extends Component {
 
     const token = this.context.token;
 
-    fetch('https://romanloky.herokuapp.com:4000/graphql', {
+    fetch('https://romanloky.herokuapp.com/graphql', {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {
