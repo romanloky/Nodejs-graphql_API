@@ -6,10 +6,11 @@ const mongoose = require('mongoose');
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolvers = require('./graphql/resolvers/index');
 const isAuth = require('./middleware/is-auth');
-
+const path = require('path')
+const PORT = process.env.PORT || 5000
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -38,7 +39,7 @@ mongoose
     
   )
   .then(() => {
-      var server = app.listen(process.env.Port || 4000,function(){
+      var server = app.listen(PORT,function(){
       var port = server.address().port;
       console.log("express working "+port);
     }
