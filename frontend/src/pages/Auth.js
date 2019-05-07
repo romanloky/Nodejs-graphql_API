@@ -64,7 +64,7 @@ class AuthPage extends Component {
       };
     }
 
-    fetch('https://romanloky.herokuapp.com:4000/graphql', {
+    fetch('https://romanloky.herokuapp.com/graphql', {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {
