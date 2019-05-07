@@ -38,7 +38,7 @@ mongoose
     
   )
   .then(() => {
-      var server = app.listen(process.env.Port,function(){
+      var server = app.listen(process.env.Port || 4000,function(){
       var port = server.address().port;
       console.log("express working "+port);
     }
