@@ -34,9 +34,7 @@ app.use(
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.MONGO_USER}:${
-      process.env.MONGO_PASSWORD
-    }@cluster0-gcwru.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`
+    `mongodb+srv://roman:oi6antRvyHGposRp@cluster0-gcwru.mongodb.net/events-react-dev?retryWrites=true`
     
   )
   .then(() => {
